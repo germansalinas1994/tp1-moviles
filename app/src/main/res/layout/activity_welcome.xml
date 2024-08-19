@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Welcome"
+    android:background="@color/background">
+
+    <!-- Mensaje de Bienvenida -->
+    <TextView
+        android:id="@+id/tvBienvenida"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- Selección de Plataforma -->
+    <TextView
+        android:id="@+id/tvPlataforma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plataforma utilizada"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvBienvenida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <RadioGroup
+        android:id="@+id/rgPlataforma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvPlataforma"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/rbAndroid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android" />
+
+        <RadioButton
+            android:id="@+id/rbIOS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="iOS" />
+    </RadioGroup>
+
+    <!-- Imagen del logo de la plataforma -->
+    <ImageView
+        android:id="@+id/ivLogoPlataforma"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="Logo de la plataforma"
+        app:layout_constraintTop_toBottomOf="@id/rgPlataforma"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Preferencias -->
+    <TextView
+        android:id="@+id/tvPreferencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferencias"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/ivLogoPlataforma"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp" />
+
+    <LinearLayout
+        android:id="@+id/lyPreferencias"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvPreferencias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <CheckBox
+            android:id="@+id/cbProgramacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Programación" />
+
+        <CheckBox
+            android:id="@+id/cbRedes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Redes" />
+
+        <CheckBox
+            android:id="@+id/cbSeguridad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seguridad" />
+
+        <CheckBox
+            android:id="@+id/cbHardware"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hardware" />
+
+        <CheckBox
+            android:id="@+id/cbOtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Otra" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etOtraPreferencia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Especificar otra preferencia"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/lyPreferencias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Botón Continuar -->
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continuar"
+        app:layout_constraintTop_toBottomOf="@id/etOtraPreferencia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

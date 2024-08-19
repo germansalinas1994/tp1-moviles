@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0288D1</color> <!-- Azul -->
+    <color name="secondary">#FFFFFF</color> <!-- Blanco -->
+    <color name="accent">#FF4081</color> <!-- Rosa suave -->
+    <color name="textPrimary">#333333</color> <!-- Gris oscuro -->
+    <color name="background_component">#F5F5F5</color> <!-- Gris suave -->
+    <color name="background">#FFFFFF</color> <!-- Blanco -->
+    <color name="black">#000000</color> <!-- Negro puro, para textos necesarios -->
+</resources>
